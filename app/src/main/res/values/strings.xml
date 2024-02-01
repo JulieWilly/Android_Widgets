@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Android_Widgetes</string>
+    <string-array name="array_cities">
+        <item>Nairobi</item>
+        <item>Muranga</item>
+        <item>Nyeri</item>
+        <item>Kilifi</item>
+        <item>Mombasa</item>
+        <item>Kisumu</item>
+        <item>Narok</item>
+        <item>Kitale</item>
+        <item>Kinagop</item>
+        <item>Nyahururu</item>
+        <item>Mweiga</item>
+        <item>Nairutia</item>
+        <item>Karigoini</item>
+        <item>Marina</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

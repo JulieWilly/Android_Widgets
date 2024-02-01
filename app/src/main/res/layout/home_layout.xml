@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- list view-->
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Next"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Enter your favourite programming language."
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintHorizontal_bias="0.622"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/autoCompleteTxt"
+ />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTxt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitle"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
+            android:id="@+id/listView"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintHorizontal_bias="0.011"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/listView" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+       <SeekBar
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/webView"
+           app:layout_constraintEnd_toEndOf="@id/constLayout"
+           app:layout_constraintStart_toStartOf="@id/constLayout"
+           android:layout_margin="20dp"
+           android:id="@+id/seekBar"/>
+
+
+        <TextView
+            android:id="@+id/txtDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/txtDatePicker"
+            app:layout_constraintBottom_toTopOf="@id/btnDisplayDate"/>
+        <Button
+            android:id="@+id/btnDisplayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Display Date"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/txtDatePicker"
+            app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Submit"
+            android:id="@+id/btnSubmit"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/btnDisplayDate"/>
+
+    <!-- TIME PICKER. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+            android:id="@+id/timePicker"/>
+
+        <TimePicker
+            android:id="@+id/timePickerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/timePicker" />
+
+        <Button
+            android:id="@+id/showTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Time"
+            app:layout_constraintStart_toStartOf="@id/constLayout"
+            app:layout_constraintEnd_toEndOf="@id/constLayout"
+            app:layout_constraintTop_toBottomOf="@id/timePickerView"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
